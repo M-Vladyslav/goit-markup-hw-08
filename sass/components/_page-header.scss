@@ -1,0 +1,101 @@
+.navigation {
+  display: flex;
+  margin-left: 93px;
+  align-items: center;
+}
+.navigation__header {
+  @extend %list;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  display: flex;
+}
+.navigation__header-link {
+  @extend %link-decoration;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $dark-grey-color;
+  position: relative;
+  padding: 32px 0;
+  transition: color $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $blue-color;
+  }
+}
+.navigation__header-link--current {
+  color: $blue-color;
+  position: relative;
+}
+
+.navigation__item {
+  display: flex;
+  align-content: center;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.navigation__header .navigation__item {
+  margin-right: 50px;
+}
+.contact {
+  @extend %list;
+  display: flex;
+  margin-left: auto;
+  margin-right: 0;
+  align-items: center;
+}
+.contact__tel {
+  @extend %link-decoration;
+  display: flex;
+  align-items: center;
+  color: $main-text-color;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $main-text-color;
+  transition: color $timing-function;
+  &:hover,
+  &:focus {
+    color: $blue-color;
+  }
+}
+.contact__icon-phone {
+  fill: currentColor;
+  margin-right: 10px;
+  align-self: center;
+}
+.contact__icon-letter {
+  fill: currentColor;
+  margin-right: 10px;
+  align-items: center;
+}
+.contact__mail {
+  @extend %link-decoration;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $main-text-color;
+  transition: color $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $blue-color;
+  }
+}
+
+.contact__item {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: block;
+
+  .contact & + & {
+    margin-left: 50px;
+  }
+}

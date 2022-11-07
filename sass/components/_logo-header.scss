@@ -1,0 +1,33 @@
+.title {
+  border-bottom: 1px solid #ececec;
+}
+
+.logo {
+  @extend %container;
+  display: flex;
+  align-items: center;
+}
+.logo__Web-header {
+  @extend %link-decoration;
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  /* identical to box height */
+  letter-spacing: 0.03em;
+  color: $blue-color;
+  display: flex;
+  display: inline-block;
+}
+.logo__Studio-header {
+  @extend %link-decoration;
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  /* identical to box height */
+  letter-spacing: 0.03em;
+  color: $studio-top-color;
+  display: flex;
+  display: inline-block;
+}

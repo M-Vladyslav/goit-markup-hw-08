@@ -1,0 +1,104 @@
+.staff__image-team-list {
+  @extend %list;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.staff__image-team {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.staff__image-staff {
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  @media screen and (min-width: 768px) {
+    flex-basis: 100% / 2;
+  }
+}
+
+.staff__image-team {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: $dark-grey-color;
+}
+.image-background {
+  @extend %section;
+  background-color: $mud-white-color;
+}
+.staff__div {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.staff__image-team-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  /* identical to box height */
+  letter-spacing: 0.03em;
+  color: $dark-grey-color;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.staff__image-team-position {
+  font-size: 16px;
+  line-height: 1.18;
+  /* identical to box height */
+  letter-spacing: 0.03em;
+  color: $main-text-color;
+  display: block;
+  text-align: center;
+}
+
+.staff__image-name-discription {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+  /* identical to box height, or 188% */
+  letter-spacing: 0.03em;
+  color: $main-text-color;
+  display: block;
+  margin-top: 4px;
+}
+.staff__list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 16px;
+}
+.staff__link {
+  @include centeredFlex();
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: $top-line-color;
+  color: #afb1b8;
+  transition: background-color $timing-function, $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $blue-color;
+    color: $top-line-color;
+  }
+}
+
+.staff__icon {
+  fill: currentColor;
+  transition: fill $timing-function;
+
+  &:hover {
+    fill: $top-line-color;
+    cursor: pointer;
+  }
+}

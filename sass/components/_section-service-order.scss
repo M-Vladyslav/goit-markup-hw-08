@@ -1,0 +1,283 @@
+.service-order {
+  background: $grey-color;
+  padding-bottom: 200px;
+  padding-top: 200px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/img-staff.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
+}
+.banner {
+  @extend %container;
+}
+.banner__slogan {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  /* or 136% */
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $top-line-color;
+  width: 696px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.banner__button-order {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  /* identical to box height, or 188% */
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  cursor: pointer;
+  color: $top-line-color;
+  background: $blue-color;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  padding: 10px 32px;
+
+  &:hover,
+  &:focus {
+    color: $top-line-color;
+    background-color: $button-color;
+    transition: $timing-function;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity $timing-function, visibility $timing-function;
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.backdrop-is--hidden {
+  & .modal {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 528px;
+  height: 581px;
+  transition: transform $timing-function;
+  background-color: $top-line-color;
+  border-radius: 4px;
+}
+
+.modal__review {
+  margin-bottom: 12px;
+  font-weight: 700;
+  width: 448px;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  color: $studio-top-color;
+}
+
+.modal__table {
+  width: 100%;
+  padding: 40px;
+}
+
+.modal__form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  transition: border-color $timing-function;
+  margin-bottom: 10px;
+
+  &:focus-within .modal__input-form,
+  &:hover .modal__input-form {
+    border: 1px solid $blue-color;
+  }
+
+  &:focus-within .modal__table-icon,
+  &:hover .modal__table-icon {
+    fill: $blue-color;
+  }
+
+  &:focus-within .modal__input-comment,
+  &:hover .modal__input-comment {
+    border: 1px solid $blue-color;
+  }
+}
+.modal__form--form-comment {
+  margin-bottom: 20px;
+}
+
+.modal__input-form {
+  position: relative;
+  width: 448px;
+  height: 40px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color $timing-function;
+}
+
+.modal__label-form {
+  font-size: 12px;
+  line-height: 1.16;
+  /* identical to box height */
+  letter-spacing: 0.01em;
+  color: $main-text-color;
+}
+
+textarea {
+  resize: none;
+  margin-top: 4px;
+}
+
+.modal__input-comment {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  color: rgba(117, 117, 117, 0.5);
+  transition: border-color $timing-function;
+}
+
+.modal__form-icon {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.modal__table-icon {
+  position: absolute;
+  display: inline-block;
+  top: 60%;
+  left: 15px;
+  fill: $dark-grey-color;
+  transition: fill $timing-function;
+  transform: translateY(-50%);
+}
+
+.modal__icon-check {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid $dark-grey-color;
+  background-color: $top-line-color;
+  border-radius: 2px;
+  margin-right: 7px;
+  transition: transform $timing-function;
+}
+
+.modal__policy {
+  font-size: 14px;
+  line-height: 1.71;
+  margin-left: 5px;
+  /* identical to box height, or 171% */
+  letter-spacing: 0.03em;
+  color: $blue-color;
+  text-underline-offset: 0.25em;
+}
+
+.modal__label-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  /* identical to box height, or 171% */
+  letter-spacing: 0.03em;
+  color: $main-text-color;
+}
+
+.modal__input-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  &:checked + .modal__icon-check {
+    background-color: $blue-color;
+    background-image: url(../images/iconcheck.svg);
+    background-size: contain;
+    margin-right: 7px;
+    border-radius: 2px;
+    background-origin: border-box;
+    border-color: $blue-color;
+  }
+}
+
+.modal__button-send {
+  display: block;
+  margin: 30px auto 0;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  /* identical to box height, or 188% */
+  letter-spacing: 0.06em;
+  width: 200px;
+  height: 50px;
+  background-color: $button-color;
+  color: $top-line-color;
+  border-radius: 4px;
+  border: none;
+  border-color: $blue-color;
+}
+
+.modal__close-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: $top-line-color;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__close {
+  transition: fill $timing-function;
+  fill: #000000;
+
+  &:hover {
+    fill: $blue-color;
+  }
+}
