@@ -32,8 +32,11 @@
   letter-spacing: 0.03em;
   color: $top-line-color;
   display: block;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   transition: color $timing-function;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 9px;
+  }
 
   &:hover,
   &:focus {
@@ -50,9 +53,12 @@
   letter-spacing: 0.03em;
   color: $mail-color;
   display: block;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   transition: color $timing-function;
 
+  @media screen and (min-width: 768px) {
+    margin-bottom: 9px;
+  }
   &:hover,
   &:focus {
     color: $blue-color;
@@ -87,6 +93,10 @@
 
 .footer__social-network {
   text-align: center;
+
+  @media screen and (max-width: 1200px) {
+    margin-top: 60px;
+  }
   @media screen and (min-width: 1200px) {
     margin-left: 70px;
   }
@@ -139,6 +149,11 @@
     margin-left: 93px;
   }
 }
+.footer__news-letter {
+  @media screen and (max-width: 1200px) {
+    margin-top: 60px;
+  }
+}
 .footer__news-letter input {
   margin: left auto;
   padding: 15px;
@@ -173,6 +188,13 @@
   padding-bottom: 10px;
   margin-left: 12px;
 }
+.footer__button-mob {
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 1200px) {
+    margin-top: 20px;
+  }
+}
 .footer__button-sign {
   @include centeredFlex();
   background-color: $blue-color;
@@ -184,6 +206,7 @@
     margin-left: 28px;
   }
 }
+
 .footer__text-sign {
   font-weight: 700;
   font-size: 16px;
