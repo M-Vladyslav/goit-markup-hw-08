@@ -1,5 +1,6 @@
 .soft-skills {
   @extend %section;
+  padding: 60px 0;
 }
 
 .skills__hidden {
@@ -12,8 +13,9 @@
   margin-bottom: 0;
   gap: 30px;
   justify-content: center;
-
-  @media screen and (min-width: 768px) {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (max-width: 767px) {
     display: flex;
     flex-wrap: wrap;
   }
@@ -34,6 +36,9 @@
   color: $dark-grey-color;
   width: 270px;
   margin-bottom: 10px;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 .skills__icons {
   @include centeredFlex();

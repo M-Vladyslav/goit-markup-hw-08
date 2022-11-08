@@ -52,6 +52,10 @@
     transition: $timing-function;
   }
 }
+.banner__button-mob {
+  display: flex;
+  justify-content: center;
+}
 
 .backdrop {
   position: fixed;
