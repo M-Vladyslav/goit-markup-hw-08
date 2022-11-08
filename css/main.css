@@ -306,7 +306,7 @@ button {
   overflow: hidden;
 }
 
-.btns, .footer, .skills, .banner, .logo {
+.btns, .footer, .banner, .logo {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
@@ -337,6 +337,28 @@ button {
   .container {
     width: 1200px;
   }
+}
+
+.menu-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
 }
 
 .navigation {
@@ -816,6 +838,9 @@ textarea {
   list-style: none;
   margin-bottom: 0;
   gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .skills__list {
@@ -824,6 +849,18 @@ textarea {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+
+.skills__item-list {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .skills__item-list {
+    -ms-flex-preferred-size: 100%/2;
+        flex-basis: 100%/2;
   }
 }
 
@@ -836,12 +873,6 @@ textarea {
   color: #212121;
   width: 270px;
   margin-bottom: 10px;
-}
-@media screen and (min-width: 768px) {
-  .skills__item {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-  }
 }
 
 .skills__icons {

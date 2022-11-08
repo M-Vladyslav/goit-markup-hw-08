@@ -2,9 +2,6 @@
   @extend %section;
 }
 
-.skills {
-  @extend %container;
-}
 .skills__hidden {
   @extend %visually-hidden;
 }
@@ -14,10 +11,17 @@
   list-style: none;
   margin-bottom: 0;
   gap: 30px;
+  justify-content: center;
 
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+.skills__item-list {
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    flex-basis: 100% / 2;
   }
 }
 
@@ -30,10 +34,6 @@
   color: $dark-grey-color;
   width: 270px;
   margin-bottom: 10px;
-
-  @media screen and (min-width: 768px) {
-    flex-basis: 50%;
-  }
 }
 .skills__icons {
   @include centeredFlex();
