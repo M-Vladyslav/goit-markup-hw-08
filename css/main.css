@@ -527,31 +527,56 @@ button {
 
 .service-order {
   background: #2f303a;
-  padding-bottom: 200px;
-  padding-top: 200px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/img-staff.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/img-staff.jpg");
+  padding-bottom: 118px;
+  padding-top: 118px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/headerimgmob.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/headerimgmob.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 1600px;
-  height: 600px;
+  width: 100%;
+  height: 400px;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .service-order {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/Headerimgtab.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/Headerimgtab.jpg");
+    width: 100%;
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .service-order {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/img-staff.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/img-staff.jpg");
+    max-width: 1600px;
+    height: 600px;
+    padding-bottom: 200px;
+    padding-top: 200px;
+  }
 }
 
 .banner__slogan {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  /* or 136% */
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
-  width: 696px;
+  width: 360px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .banner__slogan {
+    font-size: 44px;
+    line-height: 1.36;
+    /* or 136% */
+    width: 696px;
+  }
 }
 
 .banner__button-order {
@@ -1201,12 +1226,23 @@ textarea {
   fill: currentColor;
 }
 
+@media screen and (min-width: 768px) {
+  .footer__tab {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .site-footer {
   background: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .site-footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1221,17 +1257,26 @@ textarea {
 }
 @media screen and (min-width: 768px) {
   .footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
   }
 }
+@media screen and (min-width: 1200px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 
 .footer__web {
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__web {
+    margin-right: 165px;
+  }
 }
 
 .footer__google-map {
@@ -1301,9 +1346,14 @@ textarea {
 .footer__social-network {
   text-align: center;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 767px) {
   .footer__social-network {
     margin-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__social-network {
+    margin-top: 5px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1372,6 +1422,7 @@ textarea {
 @media screen and (min-width: 1200px) {
   .footer__news-title {
     margin-left: 93px;
+    text-align: left;
   }
 }
 
