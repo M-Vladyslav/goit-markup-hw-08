@@ -306,7 +306,7 @@ button {
   overflow: hidden;
 }
 
-.btns, .footer, .banner, .logo {
+.btns, .banner, .logo {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
@@ -1179,21 +1179,36 @@ textarea {
 }
 
 .site-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   background: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media screen and (min-width: 768px) {
+  .site-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+.footer__web {
+  text-align: center;
 }
 
 .footer__google-map {
@@ -1251,7 +1266,12 @@ textarea {
 }
 
 .footer__social-network {
-  margin-left: 70px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer__social-network {
+    margin-left: 70px;
+  }
 }
 
 .footer__social-network-title {
@@ -1270,6 +1290,9 @@ textarea {
   display: flex;
   margin-top: 20px;
   gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer__social-link {
@@ -1300,13 +1323,18 @@ textarea {
 }
 
 .footer__news-title {
-  margin-left: 93px;
   margin-bottom: 20px;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer__news-title {
+    margin-left: 93px;
+  }
 }
 
 .footer__news-letter input {
@@ -1327,10 +1355,15 @@ textarea {
 }
 
 .footer__mail {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 93px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer__mail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 93px;
+  }
 }
 
 .footer__text-email {
@@ -1355,12 +1388,16 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 28px;
   background-color: #2196f3;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   color: #ffffff;
+}
+@media screen and (min-width: 1200px) {
+  .footer__button-sign {
+    margin-left: 28px;
+  }
 }
 
 .footer__text-sign {

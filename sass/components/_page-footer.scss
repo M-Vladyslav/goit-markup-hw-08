@@ -1,14 +1,22 @@
 .site-footer {
-  display: flex;
   background: $grey-color;
   padding-top: 60px;
   padding-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .footer {
-  @extend %container;
-  display: flex;
-  align-items: baseline;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.footer__web {
+  text-align: center;
 }
 
 .footer__contact-information {
@@ -78,7 +86,10 @@
 }
 
 .footer__social-network {
-  margin-left: 70px;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 .footer__social-network-title {
   font-weight: 700;
@@ -94,6 +105,7 @@
   display: flex;
   margin-top: 20px;
   gap: 10px;
+  justify-content: center;
 }
 .footer__social-link {
   @include centeredFlex();
@@ -116,13 +128,16 @@
 }
 
 .footer__news-title {
-  margin-left: 93px;
   margin-bottom: 20px;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $top-line-color;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 }
 .footer__news-letter input {
   margin: left auto;
@@ -141,8 +156,11 @@
 }
 
 .footer__mail {
-  display: flex;
-  margin-left: 93px;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: 93px;
+  }
 }
 .footer__text-email {
   color: rgba(255, 255, 255, 0.6);
@@ -157,11 +175,14 @@
 }
 .footer__button-sign {
   @include centeredFlex();
-  margin-left: 28px;
   background-color: $blue-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   color: $top-line-color;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 28px;
+  }
 }
 .footer__text-sign {
   font-weight: 700;
