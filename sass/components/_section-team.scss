@@ -1,3 +1,10 @@
+
+.staff__img {
+  display: block;
+  max-width: 100%;
+}
+
+
 .staff__image-team-list {
   @extend %list;
   justify-content: center;
