@@ -25,31 +25,65 @@
       <div class="logo container">
         <a class="logo__Studio-header" href="index.html">
           <span class="logo__Web-header">Web</span>Studio</a>
-        <nav class="navigation">
-          <button type="button" class="menu-button is-open" aria-expanded="false" aria-controls="menu-container" js-open-menu>
-            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-              <use class="icon-cross" href="./images/close_mobile.svg"></use>
-              <use class="icon-menu"  href="./images/menu_mobile.svg"></use>
-      
-            </svg>
-          </button>
-          <div class="menu-container" id="menu-container" data-menu>
-          <ul class="navigation__header">
-    
+                  <nav class="navigation">      
+                      <ul class="navigation__header">
             <li class="navigation__item">
               <a href="./index.html" class="navigation__header-link navigation__header-link--current"
                 >Студія</a>
             </li>
             <li class="navigation__item">
               <a href="./portfolio.html" class="navigation__header-link"
-                >Портфоліо</a
-              >
+                >Портфоліо</a>
             </li>
             <li class="navigation__item">
               <a href="./index.html" class="navigation__header-link">Контакти</a>
             </li>
           </ul>
+                  </nav>
+                 <ul class="contact">
+            <li class="contact__item">
+              <a class="contact__mail" href="mailto:info@devstudio.com">
+                <svg class="contact__icon-letter" width="16px" height="12px">
+                <use href="./images/symbol-defs.svg#icon-letterhover"></use>
+              </svg>info@devstudio.com</a>
+            </li>
+            <li class="contact__item">
+              <a class="contact__tel" href="tel:+380961111111">
+                <svg class="contact__icon-phone" width="12px" height="16px"> 
+                <use href="./images/symbol-defs.svg#icon-phone"></use></svg>+38 096 111 11 11</a>
+            </li>
+          </ul>
+            <button class="menu-button" type="button" js-open-menu>
+            <svg class="menu-button__open" width="40" height="40" aria-label="Переключатель мобильного меню">
+                <use class="menu-button__icon"  href="./images/symbol-defsmobile.svg#icon-menu_mobile"></use>
+            </svg>
+</button>
+<div class="mob is-hidden" js-menu-container>
+           <div class="mob__menu-container" >
+            <div class="mob__navigation-div">
+            <nav class="mob__navigation"> 
+              <button class="mob__close-button" type="button" js-close-menu>
+                <svg class="mob__close-button-svg" width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="mob__close-button-icon"  href="./images/symbol-defsmobile.svg#icon-close_mobile"></use>
+                </svg>              
+          <ul class="mob__navigation-header">
+            <li class="mob__navigation-item">
+              <a href="./index.html" class="mob__navigation-header-link mob__navigation-header-link--current"
+                >Студія</a>
+            </li>
+            <li class="mob__navigation-item">
+              <a href="./portfolio.html" class="mob__navigation-header-link"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="mob__navigation-item">
+              <a href="./index.html" class="mob__navigation-header-link">Контакти</a>
+            </li>
+          </ul>
+          
         </nav>
+      </div>
+        <div class="contact__mob">
          <ul class="contact">
             <li class="contact__item">
               <a class="contact__mail" href="mailto:info@devstudio.com">
@@ -64,9 +98,11 @@
             </li>
           </ul>
           </div>
+          </div>
+        </div>
       </div>
-      </section>
-    </header>
+        </header>
+  </section>
     <main>
       <section class="service-order">
         <div class="banner container">
