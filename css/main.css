@@ -348,6 +348,11 @@ button {
   border: none;
   background-color: transparent;
 }
+@media screen and (min-width: 768px) {
+  .navigation__menu-button {
+    display: none;
+  }
+}
 
 .navigation__menu-button .navigation__close-button-icon {
   display: none;
@@ -362,18 +367,38 @@ button {
 }
 
 .navigation__mob-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
   background-color: aqua;
   padding: 20px;
   text-align: center;
   font-size: 20px;
 }
-.navigation__mob-menu.is-open {
-  display: block;
+@media screen and (max-width: 767px) {
+  .navigation__mob-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  .navigation__mob-menu.is-open {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigation__mob-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .menu {
@@ -453,6 +478,11 @@ button {
 @media screen and (max-width: 767px) {
   .contact {
     display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact {
+    display: block;
   }
 }
 
