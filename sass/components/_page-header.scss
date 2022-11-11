@@ -193,6 +193,9 @@
   display: flex;
   margin-left: 93px;
   align-items: center;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 88px;
+  }
 }
 .navigation__header {
   @extend %list;
@@ -227,15 +230,26 @@
 }
 
 .navigation__item {
-  display: flex;
-  align-content: center;
-  &:last-child {
-    margin-right: 0;
+  @media screen and (min-width: 767px) {
+    display: flex;
+    align-content: center;
+    &:last-child {
+      margin-right: 0;
+    }
   }
+
   @media screen and (max-width: 767px) {
     display: none;
   }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-content: center;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
+
 .navigation__header .navigation__item {
   margin-right: 50px;
 }
@@ -248,21 +262,28 @@
   @media screen and (max-width: 767px) {
     display: none;
   }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: block;
+  }
 }
+
 .contact__tel {
   @extend %link-decoration;
-  display: flex;
-  align-items: center;
   color: $main-text-color;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
-  color: $main-text-color;
   transition: color $timing-function;
   &:hover,
   &:focus {
     color: $blue-color;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.14;
+    display: flex;
+    align-items: center;
   }
 }
 .contact__icon-phone {
@@ -278,8 +299,8 @@
 .contact__mail {
   @extend %link-decoration;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
   color: $main-text-color;
   transition: color $timing-function;
@@ -288,17 +309,35 @@
   &:focus {
     color: $blue-color;
   }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .contact__item {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  display: block;
-
-  .contact & + & {
-    margin-left: 50px;
-  }
   @media screen and (max-width: 767px) {
     display: none;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    .contact & + & {
+      margin-left: 50px;
+    }
+  }
+}
+.contact__item:last-child {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 0px;
   }
 }

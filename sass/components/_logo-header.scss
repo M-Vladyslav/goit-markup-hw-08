@@ -6,28 +6,45 @@
   @extend %container;
   display: flex;
   align-items: center;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 0;
+  }
 }
 .logo__Web-header {
   @extend %link-decoration;
+  margin-left: 0;
   font-family: 'Raleway';
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
   /* identical to box height */
   letter-spacing: 0.03em;
   color: $blue-color;
-  display: flex;
-  display: inline-block;
+  // display: flex;
+  // display: inline-block;
+  @media screen and (max-width: 1199px) {
+    font-size: 24px;
+    line-height: 1.174;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 .logo__Studio-header {
   @extend %link-decoration;
   font-family: 'Raleway';
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  /* identical to box height */
+
   letter-spacing: 0.03em;
   color: $studio-top-color;
   display: flex;
   display: inline-block;
+  margin-left: 0;
+  @media screen and (max-width: 1199px) {
+    font-size: 24px;
+    line-height: 1.174;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
