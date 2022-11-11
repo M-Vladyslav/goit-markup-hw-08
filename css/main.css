@@ -575,7 +575,6 @@ button {
   margin-left: 0;
   font-family: "Raleway";
   font-weight: 700;
-  /* identical to box height */
   letter-spacing: 0.03em;
   color: #2196f3;
 }
@@ -948,18 +947,22 @@ button {
   border-radius: 4px;
 }
 
+@media screen and (max-width: 1199px) {
+  .backdrop .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
 .modal__review {
-  margin-bottom: 12px;
+  font-family: "Roboto";
+  font-style: normal;
   font-weight: 700;
-  width: 448px;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 30px;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   letter-spacing: 0.03em;
-  color: #000000;
+  margin-bottom: 12px;
 }
 
 .modal__table {
@@ -997,7 +1000,7 @@ button {
 
 .modal__input-form {
   position: relative;
-  width: 448px;
+  width: 100%;
   height: 40px;
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -1066,30 +1069,23 @@ textarea {
 }
 
 .modal__policy {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 14px;
   margin-left: 5px;
-  /* identical to box height, or 171% */
   letter-spacing: 0.03em;
   color: #2196f3;
   text-underline-offset: 0.25em;
+  text-decoration: underline;
 }
 
 .modal__label-checkbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  /* identical to box height, or 171% */
+  font-size: 12px;
+  line-height: 14px;
   letter-spacing: 0.03em;
+  color: #757575;
+  margin-top: 3px;
   color: #757575;
 }
 
