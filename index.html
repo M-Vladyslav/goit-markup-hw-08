@@ -22,57 +22,82 @@
   <body>
 <section>
     <header class="title">
-      <div class="menu">
-        <nav class="navigation">  
+ 
       <div class="logo container">
         <a class="logo__Studio-header" href="index.html">
-          <span class="logo__Web-header">Web
-          </span>Studio
-        </a>
-      </div>
-          
-          <button 
-                    type="button" 
-                    class="navigation__menu-button is-open" 
-                    aria-expanded="false" 
-                    aria-controls="menu"
-                    data-menu-button>
-            <svg class="navigation__menu-button-svg" 
-                      width="40" 
-                      height="40" 
-                      aria-label="Переключатель мобильного меню">
-              <use class="navigation__close-button-icon"  href="./images/symbol-defsmobile.svg#icon-close_mobile"></use>
-              <use class="navigation__menu-button-icon"  href="./images/symbol-defsmobile.svg#icon-menu_mobile"></use>
-            </svg>
-          </button>  
-          <div class="navigation__mob-menu is-open" id="menu" data-menu>
-                        <ul class="navigation__header">
-             <li class="navigation__item">
-              <a href="./index.html" class="navigation__header-link navigation__header-link--current">Студія
-              </a>
-             </li>
-             <li class="navigation__item">
-              <a href="./portfolio.html" class="navigation__header-link">Портфоліо
-              </a>
-             </li>
-             <li class="navigation__item">
-              <a href="./index.html" class="navigation__header-link">Контакти
-              </a>
-             </li>
-            </ul>
-              <ul class="contact">
+          <span class="logo__Web-header">Web</span>Studio</a>
+        <nav class="navigation">
+          <ul class="navigation__header">
+            <li class="navigation__item">
+              <a href="./index.html" class="navigation__header-link navigation__header-link--current"
+                >Студія</a>
+            </li>
+            <li class="navigation__item">
+              <a href="./portfolio.html" class="navigation__header-link"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="./index.html" class="navigation__header-link">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+         <ul class="contact">
             <li class="contact__item">
               <a class="contact__mail" href="mailto:info@devstudio.com">
                 <svg class="contact__icon-letter" width="16px" height="12px">
                 <use href="./images/symbol-defs.svg#icon-letterhover"></use>
               </svg>info@devstudio.com</a>
-             </li>
-             <li class="contact__item">
+            </li>
+            <li class="contact__item">
               <a class="contact__tel" href="tel:+380961111111">
                 <svg class="contact__icon-phone" width="12px" height="16px"> 
                 <use href="./images/symbol-defs.svg#icon-phone"></use></svg>+38 096 111 11 11</a>
-             </li>
-            </ul>
+            </li>
+          </ul>
+          <button 
+          type="button" 
+          class="menu-button" 
+          data-menu-open>
+  <svg class="menu-button__svg" 
+            width="40" 
+            height="40" 
+            aria-label="Переключатель мобильного меню">
+                <use class="menu-button__icon"  href="./images/symbol-defsmobile.svg#icon-menu_mobile"></use>
+      </svg>
+        </button>  
+      </div>
+          
+<div class="mob-menu is-hidden" data-menu> 
+  <div class="mob-menu__container">
+ <div class="mob-menu__top">
+      <button
+                    type="button" 
+                    class="mob-menu__button" 
+                    data-menu-close>
+            <svg class="mob-menu__button-svg" 
+                      width="40" 
+                      height="40" 
+                      aria-label="Переключатель мобильного меню">
+              <use class="mob-menu__close-button-icon"  href="./images/symbol-defsmobile.svg#icon-close_mobile"></use>
+                         </svg>
+          </button> 
+      <ul class="mob-menu__header">
+   <li class="mob-menu__item">
+    <a href="./index.html" class="mob-menu__header-link mob-menu__header-link--current">Студія
+    </a>
+   </li>
+   <li class="mob-menu__item">
+    <a href="./portfolio.html" class="mob-menu__header-link">Портфоліо
+    </a>
+   </li>
+   <li class="mob-menu__item">
+    <a href="./index.html" class="mob-menu__header-link">Контакти
+    </a>
+   </li>
+  </ul>
+  </div>
+  <div class="mob-menu__bottom">
             <ul class="mob-contact">
               <li class="mob-contact__item">
                 <a class="mob-contact__tel" href="tel:+380961111111">+38 096 111 11 11</a>
@@ -95,11 +120,13 @@
                 <li class="mob-sc__item">
                   <a class="mob-sc__link" href="">LinkedIn</a>
                 </li>
-
                </ul>
-          </div>
-        </nav>
-      </div>
+               </div>
+               </div>
+               </div>
+               
+       
+     
     </header>
   </section>
     <main>
@@ -404,7 +431,7 @@
                 <img class="staff__img"
                 src="./images/imgmihadesktop.jpg"
             
-              alt="ффото Михайло Єрмаков"/>
+              alt="фото Михайло Єрмаков"/>
               </picture>
               <!-- <img class="staff__img" width="270" alt="фото Михайло Єрмаков" src="images/imgg.jpg" /> -->
               <div class="staff__div">
