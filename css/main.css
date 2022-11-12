@@ -954,6 +954,7 @@ button {
 }
 
 .modal__review {
+  width: 100%;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;

@@ -39,8 +39,7 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
   display: block;
-  margin-bottom: 302px;
-
+  margin: auto;
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -86,8 +85,10 @@
   }
 }
 
-.mob-sc {
+.mob-sc :not(:last-child) {
   display: flex;
+  flex: wrap;
+  row-gap: 15px;
   @media screen and (min-width: 768px) {
     display: none;
   }
