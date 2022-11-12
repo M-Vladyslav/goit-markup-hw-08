@@ -1,9 +1,7 @@
-
 .staff__img {
   display: block;
   max-width: 100%;
 }
-
 
 .staff__image-team-list {
   @extend %list;
@@ -31,12 +29,22 @@
   }
 }
 
+.staff__image-staff:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+}
+
 .staff__image-team {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: $dark-grey-color;
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 .image-background {
   @extend %section;

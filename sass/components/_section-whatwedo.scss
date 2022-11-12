@@ -1,4 +1,5 @@
 .whatwedo {
+  @extend %section;
   @media (max-width: 1199px) {
     display: none;
   }
@@ -9,6 +10,8 @@
 
 .job__image-title {
   text-align: center;
+  font-size: 36px;
+  line-height: 1.17;
   margin-bottom: 50px;
 }
 .job__image-list {

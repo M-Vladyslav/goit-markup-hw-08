@@ -85,7 +85,7 @@
   }
 }
 
-.mob-sc :not(:last-child) {
+.mob-sc {
   display: flex;
   flex: wrap;
   row-gap: 15px;
@@ -94,7 +94,7 @@
   }
 }
 
-.mob-sc__item {
+.mob-sc__item:not(:last-child) {
   margin-right: 10px;
   padding-right: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
